@@ -12,6 +12,8 @@ Biped robot using Jetson Nano
 - Ubuntu 20.04
 - ROS2 Galactic
 
+### Images
+
 <p align="center">
   <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png" width = "249" height = "250"/>
 </p>
@@ -20,4 +22,8 @@ Biped robot using Jetson Nano
 </p>
 <p align="center">
 Leg dimensions from CAD
+</p>
+
+<p align="center">
+  <img src="https://github.com/ethan-blomberg/Legs/blob/main/rviz_ss.png" width = "311" height = "250"/>
 </p>
