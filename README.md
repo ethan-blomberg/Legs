@@ -13,8 +13,8 @@ Biped robot using Jetson Nano
 - ROS2 Galactic
 
 <p float="left">
-  <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png" width = "497" height = "500"/>
-  <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png" width = "418" height = "500"/>
+  <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png" width = "249" height = "250"/>
+  <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png" width = "209" height = "250"/>
 </p>
 <p align="center">
 Leg dimensions from CAD
