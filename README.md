@@ -22,4 +22,4 @@ Leg dimensions from CAD
 
                                            Side                                                 |                                                    Front
 :----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------:
-![]([https://...Dark.png](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png))  |  ![]([https://...Ocean.png](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png))
+![](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png)  |  ![](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png)
