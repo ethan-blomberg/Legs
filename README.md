@@ -14,12 +14,10 @@ Biped robot using Jetson Nano
 
 <p float="center">
   <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png" width = "249" height = "250"/>
+</p>
+<p float="center">
   <img src="https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png" width = "209" height = "250"/>
 </p>
 <p align="center">
 Leg dimensions from CAD
 </p>
-
-                                           Side                                                 |                                                    Front
-:----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------:
-![](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png)  |  ![](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png)
