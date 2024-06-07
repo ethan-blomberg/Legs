@@ -20,6 +20,6 @@ Biped robot using Jetson Nano
 Leg dimensions from CAD
 </p>
 
-Side            |  Front
-:-------------------------:|:-------------------------:
+                                           Side                                                 |                                                    Front
+:----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------:
 ![]([https://...Dark.png](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_side.png))  |  ![]([https://...Ocean.png](https://github.com/ethan-blomberg/Legs/blob/main/leg_dims_front.png))
