@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+    <include file="$(find-pkg-share my_bot)/launch/rsp.launch.py"/>
+
+    <node pkg="rviz2" exec="rviz2" args="-d /home/jetson/.rviz2/my_bot.rviz"/>
+
+    <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui"/>
+
+</launch>

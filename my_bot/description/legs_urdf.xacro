@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- white, black, yellow, blue, pink, purple, orange -->
+
+    <link name="base_link">
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="0 0 0.151614"/>
+    </joint>
+    
+    <link name="chassis">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/Chassis.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/Chassis.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="J1_L" type="revolute">
+        <parent link="chassis"/>
+        <child link="L1_L"/>
+        <origin rpy="0 0 0" xyz="0 0.05 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-${pi/4}" upper="${pi/2}" velocity="0.5"/>
+    </joint>
+
+    <link name="L1_L">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/1L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 -0.05 0"/>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/1L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 -0.05 0"/>
+        </collision>
+    </link>
+
+    <joint name="J1_R" type="revolute">
+        <parent link="chassis"/>
+        <child link="L1_R"/>
+        <origin rpy="0 0 0" xyz="0 -0.05 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-${pi/2}" upper="${pi/4}" velocity="0.5"/>
+    </joint>
+
+    <link name="L1_R">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/1R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.05 0"/>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/1R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.05 0"/>
+        </collision>
+    </link>
+
+    <joint name="J2_L" type="revolute">
+        <parent link="L1_L"/>
+        <child link="L2_L"/>
+        <origin rpy="0 0 0" xyz="0.0451 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="-${pi/2}" upper="${pi/8}" velocity="0.5"/>
+    </joint>
+    
+    <link name="L2_L">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/2L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 -0.05 0"/>
+            <material name="pink"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/2L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 -0.05 0"/>
+        </collision>
+    </link>
+
+    <joint name="J2_R" type="revolute">
+        <parent link="L1_R"/>
+        <child link="L2_R"/>
+        <origin rpy="0 0 0" xyz="0.0451 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="-${pi/8}" upper="${pi/2}" velocity="0.5"/>
+    </joint>
+    
+    <link name="L2_R">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/2R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 0.05 0"/>
+            <material name="pink"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/2R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 0.05 0"/>
+        </collision>
+    </link>
+
+    <joint name="J3_L" type="revolute">
+        <parent link="L2_L"/>
+        <child link="L3_L"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.047454"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-${pi}" upper="0.12" velocity="0.5"/>
+    </joint>
+    
+    <link name="L3_L">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/3L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 -0.05 0.047454"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/3L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 -0.05 0.047454"/>
+        </collision>
+    </link>
+
+    <joint name="J3_R" type="revolute">
+        <parent link="L2_R"/>
+        <child link="L3_R"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.047454"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-${pi}" upper="0.12" velocity="0.5"/>
+    </joint>
+    
+    <link name="L3_R">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/3R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 0.05 0.047454"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/3R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.0451 0.05 0.047454"/>
+        </collision>
+    </link>
+
+    <joint name="J4_L" type="revolute">
+        <parent link="L3_L"/>
+        <child link="L4_L"/>
+        <origin rpy="0 0 0" xyz="-0.107 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-0.25" upper="${pi}" velocity="0.5"/>
+    </joint>
+    
+    <link name="L4_L">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/4L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0619 -0.05 0.047454"/>
+            <material name="pink"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/4L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0619 -0.05 0.047454"/>
+        </collision>
+    </link>
+
+    <joint name="J4_R" type="revolute">
+        <parent link="L3_R"/>
+        <child link="L4_R"/>
+        <origin rpy="0 0 0" xyz="-0.107 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-0.25" upper="${pi}" velocity="0.5"/>
+    </joint>
+    
+    <link name="L4_R">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/4R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0619 0.05 0.047454"/>
+            <material name="pink"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/4R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0619 0.05 0.047454"/>
+        </collision>
+    </link>
+
+    <joint name="J5_L" type="revolute">
+        <parent link="L4_L"/>
+        <child link="L5_L"/>
+        <origin rpy="0 0 0" xyz="${0.107*sin(pi/4)} 0 -${0.107*sin(pi/4)}"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-${3*pi/4}" upper="${pi/4}" velocity="0.5"/>
+    </joint>
+    
+    <link name="L5_L">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/5L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="${(-0.107*sin(pi/4)) + 0.0619} -0.05 ${(0.107*sin(pi/4)) + 0.047454}"/>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/5L.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="${(-0.107*sin(pi/4)) + 0.0619} -0.05 ${(0.107*sin(pi/4)) + 0.047454}"/>
+        </collision>
+    </link>
+
+    <joint name="J5_R" type="revolute">
+        <parent link="L4_R"/>
+        <child link="L5_R"/>
+        <origin rpy="0 0 0" xyz="${0.107*sin(pi/4)} 0 -${0.107*sin(pi/4)}"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-${3*pi/4}" upper="${pi/4}" velocity="0.5"/>
+    </joint>
+    
+    <link name="L5_R">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/5R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="${(-0.107*sin(pi/4)) + 0.0619} 0.05 ${(0.107*sin(pi/4)) + 0.047454}"/>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/meshes/5R.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="${(-0.107*sin(pi/4)) + 0.0619} 0.05 ${(0.107*sin(pi/4)) + 0.047454}"/>
+        </collision>
+    </link>
+
+</robot>
